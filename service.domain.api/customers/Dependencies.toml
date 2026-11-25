@@ -41,7 +41,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "crypto"
-version = "2.12.0"
+version = "2.11.0"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "time"}
@@ -70,7 +70,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "http"
-version = "2.16.2"
+version = "2.16.3"
 dependencies = [
 	{org = "ballerina", name = "auth"},
 	{org = "ballerina", name = "cache"},
@@ -312,15 +312,38 @@ modules = [
 
 [[package]]
 org = "ballerinax"
-name = "resource.management"
+name = "customers"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "lang.runtime"},
+	{org = "ballerinai", name = "observe"},
+	{org = "ballerinax", name = "financial.bian.attribute.groups"}
+]
+modules = [
+	{org = "ballerinax", packageName = "customers", moduleName = "customers"}
+]
+
+[[package]]
+org = "ballerinax"
+name = "financial.bian.attribute.groups"
+version = "0.1.0"
+dependencies = [
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "io"},
 	{org = "ballerinai", name = "observe"}
 ]
 modules = [
-	{org = "ballerinax", packageName = "resource.management", moduleName = "resource.management"}
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups"},
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups.business_development"},
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups.business_management"},
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups.channels"},
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups.common"},
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups.customers"},
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups.finance_risk_management"},
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups.operations"},
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups.products"},
+	{org = "ballerinax", packageName = "financial.bian.attribute.groups", moduleName = "financial.bian.attribute.groups.resource_management"}
 ]
 

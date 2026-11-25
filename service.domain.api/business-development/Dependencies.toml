@@ -41,7 +41,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "crypto"
-version = "2.12.0"
+version = "2.11.0"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "time"}
@@ -312,7 +312,7 @@ modules = [
 
 [[package]]
 org = "ballerinax"
-name = "bian.products.service"
+name = "business.development"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
@@ -322,7 +322,7 @@ dependencies = [
 	{org = "ballerinax", name = "financial.bian.attribute.groups"}
 ]
 modules = [
-	{org = "ballerinax", packageName = "bian.products.service", moduleName = "bian.products.service"}
+	{org = "ballerinax", packageName = "business.development", moduleName = "business.development"}
 ]
 
 [[package]]

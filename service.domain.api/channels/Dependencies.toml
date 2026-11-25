@@ -312,7 +312,7 @@ modules = [
 
 [[package]]
 org = "ballerinax"
-name = "bian.operations.service"
+name = "channels"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
@@ -322,7 +322,7 @@ dependencies = [
 	{org = "ballerinax", name = "financial.bian.attribute.groups"}
 ]
 modules = [
-	{org = "ballerinax", packageName = "bian.operations.service", moduleName = "bian.operations.service"}
+	{org = "ballerinax", packageName = "channels", moduleName = "channels"}
 ]
 
 [[package]]

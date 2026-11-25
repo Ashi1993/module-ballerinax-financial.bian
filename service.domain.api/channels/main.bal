@@ -25,13 +25,13 @@ isolated http:Client externalClient = check new (serverUrl);
 http:Listener httpListener = check new (port);
 
 public function main() returns error? {
-    io:println("Starting BIAN Products Service on port: ", port.toString());
+    io:println("Starting BIAN Channels Service on port: ", port.toString());
 
     // Attach the service to the listener along with the resource path. 
-    check httpListener.attach(paymentInitiationService, "/bian/PaymentInitiation/v14");
-    check httpListener.attach(currentAccountService, "/bian/CurrentAccount/v14");
-    check httpListener.attach(savingsAccountService, "/bian/SavingsAccount/v14");
-    check httpListener.attach(corporatePayrollServices, "/bian/CorporatePayrollServices/v14");
+    check httpListener.attach(financialGatewayService, "/bian/FinancialGateway/v14");
+    check httpListener.attach(sessionDialogueService, "/bian/SessionDialogue/v14");
+    check httpListener.attach(correspondenceService, "/bian/Correspondence/v14");
+
 
     //Start the listener and register it dynamically.
     check httpListener.'start();
