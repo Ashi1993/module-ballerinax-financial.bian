@@ -1,10 +1,17 @@
-# module-ballerinax-financial.bian
+# Ballerina BIAN Implementation
 
-Ballerina implementation of the [BIAN (Banking Industry Architecture Network)](https://bian.org) Service Domain APIs for financial services.
+Ballerina implementation of the [Banking Industry Architecture Network (BIAN)](https://bian.org/) v14 service domain model. This repository provides type libraries and attribute group definitions for use in Ballerina-based financial services integrations.
 
 ## Overview
 
 This repository provides Ballerina-based HTTP service implementations for BIAN-compliant banking service domains. Each service domain is a self-contained Ballerina package that exposes REST APIs aligned with BIAN v14 specifications, delegating backend processing to a configurable backend service.
+
+## Packages
+
+| Package | Description |
+|---------|-------------|
+| [`attribute.groups.v14`](./attribute.groups.v14) | ~2,700 public Ballerina record and type definitions covering all BIAN v14 service domains, organised into domain-specific modules |
+
 
 ## Repository Structure
 
@@ -74,3 +81,49 @@ All services proxy requests to a single configurable `serverUrl` backend, making
 ## License
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+module-ballerinax-financial.bian/
+└── attribute.groups.v14/        # BIAN v14 attribute group type library
+    ├── Ballerina.toml
+    ├── main.bal
+    └── modules/
+        ├── common/                    # Shared attribute group types
+        ├── business_development/
+        ├── business_management/
+        ├── channels/
+        ├── customers/
+        ├── finance_risk_management/
+        ├── operations/
+        ├── products/
+        └── resource_management/
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+- [Ballerina](https://ballerina.io/downloads/) `2201.13.1` or compatible
+
+### Build
+```bash
+cd attribute.groups.v14
+bal build
+```
+
+### Import a Module
+```ballerina
+import financial.bian.attribute.groups.common as common;
+import financial.bian.attribute.groups.products as products;
+```
+
+See the [`attribute.groups.v14` README](./attribute.groups.v14/README.md) for the full module listing and usage examples.
+
+---
+
+## Contributing
+
+Please read the [pull request template](./pull_request_template.md) and [issue template](./issue_template.md) before contributing.
+
+## License
+
+See [LICENSE](./LICENSE) for details.
