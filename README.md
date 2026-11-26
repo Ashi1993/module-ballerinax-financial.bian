@@ -22,7 +22,7 @@ service.domain.api/
 ├── channels/                    # Financial gateway, session dialogue, correspondence (port 9092)
 ├── customers/                   # Customer lifecycle, credit rating, offers, eligibility (port 9093)
 ├── finance-and-risk-management/ # Regulatory & guideline compliance (port 9094)
-├── operations/                  # Payments, accounts, documents, position keeping (port 9095)
+├── operations/                  # Accounts, documents, position keeping (port 9095)
 ├── products/                    # Current/savings accounts, payment initiation, payroll (port 9096)
 └── resource-management/         # Resource management services (port 9097)
 ```
@@ -57,7 +57,7 @@ bal run -- --port=<port> --serverUrl=<backend-url>
 Or using the provided `Config.toml` defaults:
 
 ```bash
-cd service.domain.api/customers
+cd service.domain.api/products
 bal run
 ```
 
